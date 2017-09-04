@@ -1,0 +1,62 @@
+$font: "Lato", sams-serif;
+$red: #c62828;
+$grey: #949494;
+$white: #ffffff;
+html {
+  font-size: 100%;
+}
+
+body {
+  background: url("/the-vrown-background.jpg");
+}
+
+#Header {
+  padding: 40px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+#Logo {
+  width: 151px;
+  height: 41px;
+  margin-right: 10px;
+  transition: margin 0.125s ease;
+}
+
+#Search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  pointer-events: none;
+
+  input {
+    font-family: $font;
+    font-weight: 400;
+    font-size: 1rem;
+    color: $white;
+    background: transparent;
+    border: 0;
+    border: 2px solid rgba($grey, 0.1);
+    border-radius: 37px;
+    padding: 0 0.5rem;
+    height: 2rem;
+    width: 20%;
+    pointer-events: all;
+    transition: border 0.25s ease, width 0.125s ease 0.125s;
+
+    outline: none;
+    appearance: none;
+
+    &:focus {
+      border: 2px solid $red;
+      width: 30%;
+    }
+  }
+}
