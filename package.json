@@ -12,9 +12,9 @@
     "webfontloader": "^1.6.28"
   },
   "scripts": {
-    "build-css": "node-sass src/style/scss/main.scss -o src/",
+    "build-css": "node-sass src/main.scss -o src/",
     "watch-css":
-      "yarn run build-css && node-sass src/style/scss/main.scss -o src/ --watch --recursive",
+      "yarn run build-css && node-sass src/main.scss -o src/ --watch --recursive",
     "start-js": "react-scripts start",
     "start": "run-p watch-css start-js",
     "build": "yarn run build-css && react-scripts build",

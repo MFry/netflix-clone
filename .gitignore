@@ -1,7 +1,13 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
+# Sass built files
+main.css
+
 # dependencies
 /node_modules
+
+#debugging
+.vscode/chrome
 
 # testing
 /coverage
