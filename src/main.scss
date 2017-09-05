@@ -7,7 +7,10 @@ html {
 }
 
 body {
-  background: url("/the-vrown-background.jpg");
+  background: url("./the-crown-background.jpg");
+  background-size: cover;
+  color: $white;
+  font-family: $font;
 }
 
 #Header {
@@ -23,9 +26,30 @@ body {
 
 #Logo {
   width: 151px;
-  height: 41px;
+  height: 2.2rem;
+  vertical-align: middle;
   margin-right: 10px;
   transition: margin 0.125s ease;
+}
+
+#Navigation {
+  display: flex;
+  padding: 0 40px;
+  height: 2rem;
+  align-items: center;
+  a {
+    color: $white;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 7px 10px;
+    transition: background 0.125s ease;
+    border-radius: 3px;
+
+    &:hover {
+      background: $red;
+      cursor: pointer;
+    }
+  }
 }
 
 #Search {
@@ -37,18 +61,17 @@ body {
   pointer-events: none;
 
   input {
-    font-family: $font;
     font-weight: 400;
     font-size: 1rem;
     color: $white;
     background: transparent;
     border: 0;
-    border: 2px solid rgba($grey, 0.1);
+    border: 2px solid rgba($grey, 0.3);
     border-radius: 37px;
     padding: 0 0.5rem;
     height: 2rem;
     width: 20%;
-    pointer-events: all;
+    pointer-events: auto; // When can a graphic become a target of a mouse event
     transition: border 0.25s ease, width 0.125s ease 0.125s;
 
     outline: none;
