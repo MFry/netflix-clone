@@ -17,6 +17,7 @@ body {
   padding: 40px;
   display: flex;
   position: fixed;
+  background-image: rgba(0, 0, 0, 0.7);
   top: 0;
   left: 0;
   width: 100vw;
@@ -82,4 +83,16 @@ body {
       width: 30%;
     }
   }
+}
+
+#Main {
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-color: black;
+  padding-bottom: 40%;
+}
+
+.item {
+  display: inline-block;
 }
