@@ -26,11 +26,22 @@ body {
 }
 
 #Logo {
+  path {
+    fill: #d81f26;
+  }
   width: 151px;
   height: 2.2rem;
   vertical-align: middle;
   margin-right: 10px;
   transition: margin 0.125s ease;
+
+  &:hover {
+    path {
+      fill: $white !important;
+    }
+    margin-top: 3px;
+    cursor: pointer;
+  }
 }
 
 #Navigation {
