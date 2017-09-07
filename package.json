@@ -8,13 +8,13 @@
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-responsive-carousel": "^3.1.25",
     "react-scripts": "1.0.13",
     "webfontloader": "^1.6.28"
   },
   "scripts": {
     "build-css": "node-sass src/main.scss -o src/",
-    "watch-css":
-      "yarn run build-css && node-sass src/main.scss -o src/ --watch --recursive",
+    "watch-css": "yarn run build-css && node-sass src/main.scss -o src/ --watch --recursive",
     "start-js": "react-scripts start",
     "start": "run-p watch-css start-js",
     "build": "yarn run build-css && react-scripts build",
