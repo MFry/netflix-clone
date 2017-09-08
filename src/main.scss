@@ -9,6 +9,7 @@ html {
 body {
   background: url("./the-crown-background.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
   color: $white;
   font-family: $font;
 }
@@ -22,7 +23,7 @@ body {
   left: 0;
   width: 100vw;
   box-sizing: border-box;
-  z-index: 1000;
+  z-index: 5;
 }
 
 #Logo {
