@@ -7,15 +7,19 @@ html {
 }
 
 body {
+  background: #000;
   color: $white;
   font-family: $font;
+}
+
+App {
 }
 
 #Header {
   padding: 40px;
   display: flex;
   position: fixed;
-  background-image: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   top: 0;
   left: 0;
   width: 100vw;
@@ -99,7 +103,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
-  height: 80vh;
+  //height: 80vh;
   background-color: black;
   padding-bottom: 40%;
   z-index: 1;
@@ -108,4 +112,23 @@ body {
 .item {
   box-sizing: border-box;
   display: inline-block;
+}
+
+.wrap {
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  .item {
+    background: #ddd;
+    flex: 1 0 100%;
+    &:nth-child(even) {
+      background: #d5d5d5;
+    }
+  }
 }
