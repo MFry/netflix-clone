@@ -7,9 +7,6 @@ html {
 }
 
 body {
-  background: url("./the-crown-background.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
   color: $white;
   font-family: $font;
 }
@@ -98,11 +95,14 @@ body {
 }
 
 #Main {
-  width: 100%;
-  position: relative;
+  background: url("./the-crown-background.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 80vh;
   background-color: black;
   padding-bottom: 40%;
+  z-index: 1;
 }
 
 .item {

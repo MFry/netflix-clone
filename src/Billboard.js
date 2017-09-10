@@ -1,4 +1,4 @@
 import React from 'react';
 
-const Billboard = () => <div className="Main" />;
+const Billboard = () => <div id="Main" />;
 export default Billboard;
