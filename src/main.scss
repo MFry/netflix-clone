@@ -127,6 +127,9 @@ App {
 
 .wrap {
   overflow: hidden;
+  position: relative;
+  width: auto;
+  height: 30vh;
 }
 
 .carousel {
@@ -136,8 +139,16 @@ App {
   padding: 0;
 
   .item {
+    height: 200px;
+    width: 200px;
+    margin-right: 10px;
     background: #ddd;
-    flex: 1 0 100%;
+    img {
+      height: 200px;
+      width: 200px;
+      object-fit: contain;
+    }
+
     &:nth-child(even) {
       background: #d5d5d5;
     }

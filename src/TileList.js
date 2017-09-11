@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+// import { Carousel } from 'react-responsive-carousel';
+// import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Tile from './Tile';
+import Carousel from './Carousel';
 
 class TitleList extends Component {
   constructor(props) {
@@ -27,12 +28,10 @@ class TitleList extends Component {
   render() {
     const data = this.state.data;
     if (data.length > 0) {
-      const content = data.map(movie => <Tile imgUrl={movie.backdrop_path} title={movie.title} />);
-      return (
-        <Carousel className="TileList" axis="horizontal" howArrows dynamicHeight emulateTouch>
-          {content}
-        </Carousel>
-      );
+      const content = data.map(movie => (
+        <Tile key={movie.id} imgUrl={movie.backdrop_path} title={movie.title} />
+      ));
+      return <Carousel>{content}</Carousel>;
     }
     return <div />;
   }
