@@ -16,7 +16,7 @@ App {
 }
 
 #Header {
-  padding: 40px;
+  padding: 20px 60px;
   display: flex;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.7);
@@ -99,14 +99,22 @@ App {
 }
 
 #Main {
-  background: url("./the-crown-background.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  display: flex;
   width: 100vw;
   //height: 80vh;
-  background-color: black;
   padding-bottom: 40%;
   z-index: 1;
+}
+
+#Hero {
+  order: 2;
+  flex: 3;
+  //border-image-repeat: stretch stretch;
+}
+
+#Billboard {
+  order: 1;
+  flex: 1;
 }
 
 .item {
