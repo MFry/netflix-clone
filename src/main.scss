@@ -10,6 +10,10 @@ body {
   background: #000;
   color: $white;
   font-family: $font;
+
+  * {
+    box-sizing: border-box;
+  }
 }
 
 App {
@@ -23,7 +27,6 @@ App {
   top: 0;
   left: 0;
   width: 100vw;
-  box-sizing: border-box;
   z-index: 5;
 }
 
