@@ -139,16 +139,21 @@ App {
   list-style: none;
   margin: 0;
   padding: 0;
-
+  position: relative;
+  left: -20vw;
   .item {
     flex: 1 0 20vw;
     //height: calc(20vw);
     margin-right: 10px;
+    order: 2;
     img {
       width: 100%;
       height: 100%;
       //object-fit: cover;
       object-fit: contain;
+    }
+    &.is-ref {
+      order: 1;
     }
   }
 }

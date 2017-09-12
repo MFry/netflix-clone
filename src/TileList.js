@@ -31,6 +31,9 @@ class TitleList extends Component {
       const content = data.map(movie => (
         <Tile key={movie.id} imgUrl={movie.backdrop_path} title={movie.title} />
       ));
+      content[content.length - 1] = React.cloneElement(content[content.length - 1], {
+        className: 'is-ref',
+      });
       return <Carousel>{content}</Carousel>;
     }
     return <div />;
