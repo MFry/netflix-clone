@@ -104,7 +104,7 @@ App {
 #Main {
   display: flex;
   width: 100vw;
-  //height: 80vh;
+  height: 80vh;
   //padding-bottom: 40%;
   z-index: 1;
 }
@@ -113,6 +113,7 @@ App {
   order: 2;
   flex: 3;
   //border-image-repeat: stretch stretch;
+  object-fit: contain;
 }
 
 #Billboard {
