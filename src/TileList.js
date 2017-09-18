@@ -28,7 +28,14 @@ class TitleList extends Component {
   }
 
   shiftRight() {
-    for (let i = 0; i < this.movies.length; ++i) {}
+    const movies = this.state.movies;
+    let start = 1;
+    for (let i = this.startCarousel + 1; i < this.movies.length; ++i) {
+      movies[i] = React.cloneElement(movies[i], { style: start++ });
+    }
+    for (let i = this.startCarousel; i >= 0; --i) {
+      movies[i] = React.cloneElement(movies[i], { style: movies.length });
+    }
   }
 
   renderMovieTiles(data) {
