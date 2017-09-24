@@ -14,7 +14,8 @@
   },
   "scripts": {
     "build-css": "node-sass src/main.scss -o src/",
-    "watch-css": "yarn run build-css && node-sass src/main.scss -o src/ --watch --recursive",
+    "watch-css":
+      "yarn run build-css && node-sass src/main.scss -o src/ --watch --recursive",
     "start-js": "react-scripts start",
     "start": "run-p watch-css start-js",
     "build": "yarn run build-css && react-scripts build",
@@ -31,8 +32,15 @@
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.3.0",
     "font-awesome": "^4.7.0",
+    "jest-css": "^1.0.1",
+    "jest-file": "^1.0.0",
     "node-sass": "^4.5.3",
-    "prettier-eslint": "^8.1.1"
+    "prettier-eslint": "^8.1.1",
+    "react-test-renderer": "^15.6.1"
+  },
+  "babel": {
+    "sourceMaps": "inline",
+    "presets": ["react-app"]
   },
   "license": "MIT"
 }

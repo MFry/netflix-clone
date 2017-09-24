@@ -3778,6 +3778,10 @@ jest-config@^20.0.4:
     jest-validate "^20.0.3"
     pretty-format "^20.0.3"
 
+jest-css@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/jest-css/-/jest-css-1.0.1.tgz#b7f8d3babe3749fae76d5f57d7969bf092bbe7c9"
+
 jest-diff@^20.0.3:
   version "20.0.3"
   resolved "https://registry.yarnpkg.com/jest-diff/-/jest-diff-20.0.3.tgz#81f288fd9e675f0fb23c75f1c2b19445fe586617"
@@ -3805,6 +3809,10 @@ jest-environment-node@^20.0.3:
   dependencies:
     jest-mock "^20.0.3"
     jest-util "^20.0.3"
+
+jest-file@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/jest-file/-/jest-file-1.0.0.tgz#8c599678bfd3aed0d3be9f7ea605044bfdf0158c"
 
 jest-haste-map@^20.0.4:
   version "20.0.5"
@@ -5629,6 +5637,13 @@ react-scripts@1.0.13:
     whatwg-fetch "2.0.3"
   optionalDependencies:
     fsevents "1.1.2"
+
+react-test-renderer@^15.6.1:
+  version "15.6.1"
+  resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-15.6.1.tgz#026f4a5bb5552661fd2cc4bbcd0d4bc8a35ebf7e"
+  dependencies:
+    fbjs "^0.8.9"
+    object-assign "^4.1.0"
 
 "react@^15 || ^16", react@^15.6.1:
   version "15.6.1"
