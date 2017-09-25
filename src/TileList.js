@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 // import { Carousel } from 'react-responsive-carousel';
 // import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { discoverMovies } from './api/movieDB';
 import Tile from './Tile';
 import Carousel from './Carousel';
 
@@ -13,10 +13,7 @@ class TitleList extends Component {
   }
 
   componentWillMount() {
-    axios
-      .get(
-        'https://api.themoviedb.org/3/discover/movie?api_key=87dfa1c669eea853da609d4968d294be&include_video=true&page=1&year=2017&sort_by=popularity.desc',
-      )
+    discoverMovies()
       .then((response) => {
         const data = response.data.results;
         const movies = this.renderMovieTiles(data);
@@ -71,7 +68,12 @@ class TitleList extends Component {
 
   render() {
     if (this.state.movies.length > 0) {
-      return <Carousel>{this.state.movies}</Carousel>;
+      return (
+        <div>
+          <button>Shift right</button>
+          <Carousel>{this.state.movies}</Carousel>
+        </div>
+      );
     }
     return <div />;
   }
