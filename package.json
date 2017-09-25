@@ -14,8 +14,7 @@
   },
   "scripts": {
     "build-css": "node-sass src/main.scss -o src/",
-    "watch-css":
-      "yarn run build-css && node-sass src/main.scss -o src/ --watch --recursive",
+    "watch-css": "yarn run build-css && node-sass src/main.scss -o src/ --watch --recursive",
     "start-js": "react-scripts start",
     "start": "run-p watch-css start-js",
     "build": "yarn run build-css && react-scripts build",
@@ -40,7 +39,9 @@
   },
   "babel": {
     "sourceMaps": "inline",
-    "presets": ["react-app"]
+    "presets": [
+      "react-app"
+    ]
   },
   "license": "MIT"
 }
