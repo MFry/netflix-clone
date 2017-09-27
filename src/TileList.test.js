@@ -1,7 +1,9 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
+import { createWaitForElement } from 'enzyme-wait';
 
 import TileList from './TileList';
+import Carousel from './Carousel';
 
 describe('TileList', () => {
   it('Compiles', () => {
@@ -9,15 +11,12 @@ describe('TileList', () => {
     const wrapper = shallow(<TileList />);
     expect(wrapper.find('div').length).toBe(1);
   });
-  it('Gets movies', () => {
-    jest.mock('axios', () => {
-      const { get } = require('./__mocks__/axios');
-      return {
-        get: url => get(url),
-      };
-    });
-    q;
+  it('Displays movies once the api resolves', () => {
     // axios.get = jest.fn(url => get(url));
-    const mounted = mount(<tileList />);
+    jest.mock('./api/__mocks__/axios');
+    const waitForSample = createWaitForElement(Carousel);
+    expect.assertions(1);
+    const wrapper = mount(<TileList />);
+    return waitForSample(wrapper).then(wrapper => expect(wrapper.state().movies.length).toBe(20));
   });
 });
