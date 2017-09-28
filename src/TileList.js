@@ -33,6 +33,7 @@ class TitleList extends Component {
     for (let i = this.startCarousel; i >= 0; --i) {
       movies[i] = React.cloneElement(movies[i], { style: movies.length });
     }
+    this.setState({ movies });
   }
 
   renderMovieTiles(data) {
