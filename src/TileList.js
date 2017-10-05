@@ -41,7 +41,7 @@ class TitleList extends Component {
     if (data.length > 0) {
       const order = new Array(data.length);
       for (let i = 0; i < data.length; ++i) {
-        order[i] = (i + 2) % data.length;
+        order[i] = (i + 1) % data.length;
       }
       let i = -1;
       movies = data.map((movie) => {
