@@ -28,10 +28,10 @@ class TitleList extends Component {
     const movies = this.state.movies;
     let start = 1;
     for (let i = this.startCarousel + 1; i < movies.length; ++i) {
-      movies[i] = React.cloneElement(movies[i], { style: start++ });
+      movies[i] = React.cloneElement(movies[i], { style: { order: start++ } });
     }
     for (let i = this.startCarousel; i >= 0; --i) {
-      movies[i] = React.cloneElement(movies[i], { style: movies.length });
+      movies[i] = React.cloneElement(movies[i], { style: { order: movies.length } });
     }
     this.setState({ movies });
   }
