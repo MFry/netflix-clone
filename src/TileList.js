@@ -75,7 +75,7 @@ class TitleList extends Component {
     if (this.state.movies.length > 0) {
       return (
         <div>
-          <button>Shift right</button>
+          <button onClick={() => this.shiftRight()}>Shift right</button>
           <Carousel>{this.state.movies}</Carousel>
         </div>
       );
