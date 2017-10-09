@@ -5,6 +5,11 @@ import { discoverMovies } from './api/movieDB';
 import Tile from './Tile';
 import Carousel from './Carousel';
 
+const cyclicSubtract = (num, loopValue) => {
+  if (num - 1 < 0) return loopValue - 1;
+  return num - 1;
+};
+
 class TitleList extends Component {
   constructor(props) {
     super(props);
@@ -26,14 +31,13 @@ class TitleList extends Component {
 
   shiftRight() {
     const movies = this.state.movies;
-    let start = 1;
-    for (let i = this.startCarousel + 1; i < movies.length; ++i) {
-      movies[i] = React.cloneElement(movies[i], { style: { order: start++ } });
+    const updatedMovies = new Array(movies.length);
+    for (let i = 0; i < movies.length; ++i) {
+      updatedMovies[i] = React.cloneElement(movies[i], {
+        style: { order: cyclicSubtract(movies[i].props.style.order, movies.length) },
+      });
     }
-    for (let i = this.startCarousel; i >= 0; --i) {
-      movies[i] = React.cloneElement(movies[i], { style: { order: movies.length } });
-    }
-    this.setState({ movies });
+    this.setState({ movies: updatedMovies });
   }
 
   renderMovieTiles(data) {
