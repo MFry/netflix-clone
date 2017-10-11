@@ -29,15 +29,23 @@ class TitleList extends Component {
       });
   }
 
-  shiftRight() {
+  shift(shiftFunction) {
     const movies = this.state.movies;
     const updatedMovies = new Array(movies.length);
     for (let i = 0; i < movies.length; ++i) {
       updatedMovies[i] = React.cloneElement(movies[i], {
-        style: { order: cyclicSubtract(movies[i].props.style.order, movies.length) },
+        style: { order: shiftFunction(movies[i].props.style.order, movies.length) },
       });
     }
     this.setState({ movies: updatedMovies });
+  }
+
+  shiftRight() {
+    this.shift(cyclicSubtract);
+  }
+
+  shiftLeft() {
+    this.shift((x, length) => (x + 1) % length);
   }
 
   renderMovieTiles(data) {
